@@ -6,10 +6,19 @@ const townSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    preview: {
+        type: String,
+        required: true
+
+    },
     description: {
         type: String,
         required: true
 
+    },
+    id: {
+        type: Number,
+        required: true
     },
     cityImage: {
         type: String,
@@ -27,7 +36,7 @@ townSchema.methods.sendToFirebase = async function (file) {
             res.status(201).status("GOOOOD!")
         });
     } catch (error) {
-return res.status(500).send(error)        
+        return res.status(500).send(error)
     }
 }
 const Town = mongoose.model('Town', townSchema)
