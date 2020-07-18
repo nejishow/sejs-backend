@@ -8,17 +8,7 @@ const port = process.env.PORT || 3001
 const firebase = require('firebase-admin');
 const serviceAccount = require('../sejs2020-firebase-adminsdk.json')
 app.use(cors())
-firebase.initializeApp({
-  credential: firebase.credential.cert(serviceAccount),
-  databaseURL: "https://sejs2020.firebaseio.com",
-  apiKey: "AIzaSyBPQWtx0enqjpji-_S9sMpCXTHkvAUkekc",
-  authDomain: "sejs2020.firebaseapp.com",
-  projectId: "sejs2020",
-  storageBucket: "sejs2020.appspot.com",
-  messagingSenderId: "1028657439658",
-  appId: "1:1028657439658:web:1437dadb98987e414d41d3",
-  measurementId: "G-E1RFJLGP2L"
-});
+
 const imagesPath = path.join(__dirname, '../images')
 console.log(__dirname);
 console.log(imagesPath);
