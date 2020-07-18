@@ -4,7 +4,7 @@ const cors = require("cors")
 const path = require("path")
 const townRouter = require("./routers/town")
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3001
 const firebase = require('firebase-admin');
 const serviceAccount = require('../sejs2020-firebase-adminsdk.json')
 app.use(cors())
